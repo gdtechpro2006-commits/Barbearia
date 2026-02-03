@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamentos</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1>📋 Clientes Agendados</h1>
+
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <th>Serviço</th>
+            <th>Data</th>
+            <th>Hora</th>
+        </tr>
+
+        {% for ag in agendamentos %}
+        <tr>
+            <td>{{ ag.nome }}</td>
+            <td>{{ ag.servico }}</td>
+            <td>{{ ag.data }}</td>
+            <td>{{ ag.hora }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Voltar</a>
+
+</body>
+</html>
