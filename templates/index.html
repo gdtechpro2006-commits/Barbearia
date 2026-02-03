@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Barbearia Estilo Fino</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1>💈 Barbearia Estilo Fino</h1>
+    <p>Seu visual, nossa responsabilidade.</p>
+
+    <h2>✂️ Tabela de Preços</h2>
+    <ul>
+        <li>Corte Masculino — R$ 35</li>
+        <li>Barba — R$ 25</li>
+        <li>Corte + Barba — R$ 55</li>
+        <li>Sobrancelha — R$ 10</li>
+        <li>Platinado — R$ 120</li>
+    </ul>
+
+    <h2>📅 Agendar Horário</h2>
+    <form action="/agendar" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        
+        <select name="servico" required>
+            <option value="">Escolha o serviço</option>
+            <option>Corte Masculino</option>
+            <option>Barba</option>
+            <option>Corte + Barba</option>
+            <option>Sobrancelha</option>
+            <option>Platinado</option>
+        </select>
+
+        <input type="date" name="data" required>
+        <input type="time" name="hora" required>
+
+        <button type="submit">Agendar</button>
+    </form>
+
+    <br>
+    <a href="/agendamentos">Ver clientes agendados</a>
+
+    <h2>📞 Atendimento ao Cliente</h2>
+    <p>WhatsApp: (11) 99999-9999</p>
+    <p>Instagram: @barbeariaestilofino</p>
+
+</body>
+</html>
